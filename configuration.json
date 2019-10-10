@@ -1,0 +1,39 @@
+{
+    "product" : {
+        "product_name" : "Crosshairs",
+        "vendor_id" : "", 
+        "mac_address" : "", 
+        "revision" : "1.0.0"
+    },
+
+    "software" : {
+        "version" : "1.0.0"
+    },
+
+    "company" : {
+        "name" : "Fennec systems",
+        "type" : "Public", 
+        "industry" : "Electronics", 
+        "founded" : "",
+        "headquarters" : ""
+    },
+    "cpu" : {
+        "architecture" : "arm", 
+        "CPU" : "64-bit",
+        "vendor_id" : "", 
+        "model" : "",
+        "model_name" : "",
+        "cpu_Mhz" : "1200.00",
+        "cpu_max_Mhz " : "1400.00",
+        "cpu_min_Mhz " : "600.00"
+    }, 
+    "datas" : {
+        "temperature_cpu" : "",
+        "gps" : {
+            "longitude" : "",
+            "latitude": ""
+        }
+        
+    }
+
+}

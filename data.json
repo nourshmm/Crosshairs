@@ -1,0 +1,11 @@
+{
+    "infos" : {
+        "temperature_cpu" : "",
+        "mac_mac" : "", 
+        "architecture" : ""
+    },
+    "gps" : {
+        "longitude" : "",
+        "latitude": ""
+    }
+}
