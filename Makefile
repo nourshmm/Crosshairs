@@ -13,7 +13,7 @@ RM = rm -f
 
 # Définition des options du compilateur
 
-PG_FLAGS = 
+PG_FLAGS = #-lwiringPi -lpthread
 CFLAGS = -Wall -Werr
 CPPFLAGS = 
 

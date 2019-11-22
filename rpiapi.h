@@ -56,7 +56,13 @@ typedef enum eMODE
 #define OUPUT       1
 #define PWM_OUPUT   2
 #define GPIO_CLOCK  3
-
+/*
+typedef enum eSTATE
+{
+    LOW, 
+    HIGH
+} eSTATE;
+*/
 #define LOW 0
 #define HIGH 1
 
@@ -78,8 +84,28 @@ extern int RPiAPI_setup(void);
 
 extern void RPiAPI_pin_mode(int pin, int mode);
 //extern void RPiAPI_pin_mode(int pin, eMODE mode);
+extern int RPiAPI_digital_read(int pin);
+extern void RPiAPI_digital_write(int pin, int value);
+//extern void RPiAPI_digital_write(int pin, eSTATE state);
+extern void RPiAPI_pwm_write(int pin, int value);
+extern int RPiAPI_analog_read(int pin);
+extern void RPiAPI_analog_write(int pin, int value);
 
+// Interrupts RPi Hardware specific
+extern int RPiAPI_wait_for_interrupt(int pin, int mS);
+extern int RPiAPI_ISR(int pin, int mode, void (*function)(void));
 
+// Threads
+extern int RPiAPI_thread_create(void *(*fn)(void *));
+extern void RPiAPI_lock(int key);
+extern void RPiAPI_unlock(int key);
+
+// Schedulling priority
+extern int RPiAPI_priority(const int priority);
+
+// Extras
+extern void delay(unsigned int how_long);
+extern unsigned int millis(void);
 
 #ifdef __plusplus
 }
